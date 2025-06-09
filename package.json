@@ -1,0 +1,27 @@
+{
+  "name": "cloudsolutions-web-components",
+  "version": "1.0.0",
+  "description": "Página web de CloudSolutions implementada con Web Components nativos y LitElement",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -o -c-1",
+    "dev": "npx http-server -o -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "custom-elements",
+    "shadow-dom",
+    "componentes",
+    "reutilizables"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^2.7.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
