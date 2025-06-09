@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba de <acordion> y <acordion-lit></title>
+  <script type="module" src="./acordion.js"></script>
+  <script type="module" src="./acordion-lit.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      padding: 2em;
+    }
+    h2 {
+      margin-top: 2em;
+    }
+    .custom {
+      --acordion-header-bg: #222;
+      --acordion-header-color: #ffd600;
+      --acordion-content-bg: #fffbe6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prueba de componentes &lt;acordion&gt; y &lt;acordion-lit&gt;</h1>
+
+  <h2>Instancia estándar (por defecto)</h2>
+  <acordion></acordion>
+
+  <h2>Instancia estándar con atributo JSON</h2>
+  <acordion secciones='[{"titulo":"Primera","contenido":"Contenido 1"},{"titulo":"Segunda","contenido":"Contenido 2"},{"titulo":"Tercera","contenido":"Contenido 3"}]'></acordion>
+
+  <h2>Instancia estándar con estilos personalizados</h2>
+  <acordion class="custom" secciones='[{"titulo":"A","contenido":"A1"},{"titulo":"B","contenido":"B2"}]'></acordion>
+
+  <h2>Versión LitElement (por defecto)</h2>
+  <acordion-lit></acordion-lit>
+
+  <h2>Versión LitElement con JSON</h2>
+  <acordion-lit secciones='[{"titulo":"X","contenido":"Contenido X"},{"titulo":"Y","contenido":"Contenido Y"}]'></acordion-lit>
+
+  <hr>
+  <h2>Eventos capturados</h2>
+  <div id="evento-log" style="background:#fff;padding:1em;border-radius:6px;"></div>
+
+  <script>
+    document.querySelectorAll('acordion, acordion-lit').forEach(el => {
+      el.addEventListener('acordion-cambio', e => {
+        const log = document.getElementById('evento-log');
+        log.innerHTML = `Sección abierta: <b>${e.detail.indice + 1}</b> - ${e.detail.seccion.titulo}<br>` + log.innerHTML;
+      });
+    });
+  </script>
+</body>
+</html>
