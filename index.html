@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluciones Cloud | Planes y Servicios</title>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2980b9;
+      --accent-color: #f1c40f;
+      --text-color: #333;
+      --background-color: #f9f9f9;
+      --section-bg: #fff;
+      --border-color: #eaeaea;
+    }
+    
+    body {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+    }
+    
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav li {
+      margin-left: 20px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    
+    .section {
+      padding: 60px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+    }
+    
+    .mode-toggle {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      background-color: #f1f1f1;
+      border-radius: 30px;
+      padding: 5px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .toggle-btn {
+      padding: 10px 20px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .toggle-btn.active {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .componentes-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    
+    .acordion-container {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px 0;
+      margin-top: 60px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--accent-color);
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column a {
+      color: #ecf0f1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-column a:hover {
+      color: var(--accent-color);
+    }
+    
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: #bdc3c7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">CloudSolutions</div>
+      <nav>
+        <ul>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#caracteristicas">Características</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container">
+      <h1>Soluciones cloud para empresas modernas</h1>
+      <p>Potencia tu negocio con nuestra plataforma de gestión empresarial. Escalable, segura y siempre disponible.</p>
+    </div>
+  </section>
+  
+  <!-- Sección de Planes de Suscripción -->
+  <section id="planes" class="section">
+    <div class="container">
+      <h2 class="section-title">Nuestros Planes</h2>
+      
+      <div class="mode-toggle">
+        <button class="toggle-btn active" data-mode="native">Web Components</button>
+        <button class="toggle-btn" data-mode="lit">LitElement</button>
+      </div>
+      
+      <!-- Planes con Web Components nativos -->
+      <div class="componentes-container native-components">
+        <!-- Plan Básico -->
+        <suscripcion-plan 
+          titulo="Plan Básico" 
+          precio="9.99" 
+          moneda="$" 
+          periodo="mo"
+          caracteristicas="10 GB de almacenamiento, Hasta 2 usuarios, Soporte por email"
+          url-boton="#basic"
+          texto-boton="Comenzar">
+        </suscripcion-plan>
+        
+        <!-- Plan Profesional (con tema oscuro) -->
+        <suscripcion-plan 
+          class="theme-dark"
+          titulo="Plan Profesional" 
+          precio="24.99" 
+          moneda="$" 
+          periodo="mo"
+          caracteristicas="100 GB de almacenamiento, Hasta 10 usuarios, Soporte prioritario, Características avanzadas"
+          url-boton="#pro"
+          texto-boton="Elegir Plan">
+        </suscripcion-plan>
+        
+        <!-- Plan Premium -->
+        <suscripcion-plan 
+          class="theme-premium"
+          titulo="Plan Enterprise" 
+          precio="49.99" 
+          moneda="$" 
+          periodo="mo"
+          caracteristicas="Almacenamiento ilimitado, Usuarios ilimitados, Soporte 24/7, Panel de administración, API completa, Personalización avanzada"
+          url-boton="#enterprise"
+          texto-boton="Contactar Ventas">
+        </suscripcion-plan>
+      </div>
+      
+      <!-- Planes con LitElement -->
+      <div class="componentes-container lit-components hidden">
+        <!-- Plan Básico -->
+        <suscripcion-lit 
+          titulo="Plan Básico" 
+          precio="9.99" 
+          moneda="$" 
+          periodo="mo"
+          caracteristicas="10 GB de almacenamiento, Hasta 2 usuarios, Soporte por email"
+          url-boton="#basic-lit"
+          texto-boton="Comenzar">
+        </suscripcion-lit>
+        
+        <!-- Plan Profesional (con tema oscuro) -->
+        <suscripcion-lit 
+          tema="dark"
+          titulo="Plan Profesional" 
+          precio="24.99" 
+          moneda="$" 
+          periodo="mo"
+          caracteristicas="100 GB de almacenamiento, Hasta 10 usuarios, Soporte prioritario, Características avanzadas"
+          url-boton="#pro-lit"
+          texto-boton="Elegir Plan">
+        </suscripcion-lit>
+        
+        <!-- Plan Premium -->
+        <suscripcion-lit 
+          tema="premium"
+          titulo="Plan Enterprise" 
+          precio="49.99" 
+          moneda="$" 
+          periodo="mo"
+          caracteristicas="Almacenamiento ilimitado, Usuarios ilimitados, Soporte 24/7, Panel de administración, API completa, Personalización avanzada"
+          url-boton="#enterprise-lit"
+          texto-boton="Contactar Ventas">
+        </suscripcion-lit>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de Características -->
+  <section id="caracteristicas" class="section" style="background-color: #f5f5f5;">
+    <div class="container">
+      <h2 class="section-title">Características de nuestra plataforma</h2>
+      
+      <div class="mode-toggle">
+        <button class="toggle-btn active" data-mode="native">Web Components</button>
+        <button class="toggle-btn" data-mode="lit">LitElement</button>
+      </div>
+      
+      <!-- Acordeón con Web Components nativos -->
+      <div class="acordion-container native-components">
+        <acordion-plan
+          titulo="Características de nuestro software B2B"
+          items='[
+            {
+              "titulo": "Integraciones empresariales",
+              "contenido": "<p>Nuestro software se integra perfectamente con las principales soluciones empresariales como SAP, Salesforce, Oracle y Microsoft Dynamics. Esto facilita la transición y mejora la eficiencia operativa desde el primer día.</p><p>Además, ofrecemos APIs personalizadas para sistemas propietarios.</p>"
+            },
+            {
+              "titulo": "Automatización de procesos",
+              "contenido": "<p>Automatiza flujos de trabajo complejos entre departamentos con nuestra tecnología basada en IA que aprende de tus procesos actuales y sugiere optimizaciones.</p><ul><li>Reducción de tareas manuales</li><li>Detección inteligente de errores</li><li>Informes de productividad en tiempo real</li></ul>"
+            },
+            {
+              "titulo": "Seguridad de datos",
+              "contenido": "<p>La protección de tu información empresarial es nuestra prioridad. Implementamos:</p><ul><li>Cifrado de extremo a extremo</li><li>Autenticación de múltiples factores</li><li>Cumplimiento con GDPR, HIPAA y SOC 2</li><li>Copias de seguridad automáticas</li></ul><p>Además, realizamos auditorías de seguridad trimestrales para garantizar la protección de tus datos.</p>"
+            }
+          ]'
+          class="theme-dark"
+          max-abiertos="2">
+        </acordion-plan>
+      </div>
+      
+      <!-- Acordeón con LitElement -->
+      <div class="acordion-container lit-components hidden">
+        <acordion-lit
+          titulo="Características de nuestro software B2B"
+          items='[
+            {
+              "titulo": "Integraciones empresariales",
+              "contenido": "<p>Nuestro software se integra perfectamente con las principales soluciones empresariales como SAP, Salesforce, Oracle y Microsoft Dynamics. Esto facilita la transición y mejora la eficiencia operativa desde el primer día.</p><p>Además, ofrecemos APIs personalizadas para sistemas propietarios.</p>"
+            },
+            {
+              "titulo": "Automatización de procesos",
+              "contenido": "<p>Automatiza flujos de trabajo complejos entre departamentos con nuestra tecnología basada en IA que aprende de tus procesos actuales y sugiere optimizaciones.</p><ul><li>Reducción de tareas manuales</li><li>Detección inteligente de errores</li><li>Informes de productividad en tiempo real</li></ul>"
+            },
+            {
+              "titulo": "Seguridad de datos",
+              "contenido": "<p>La protección de tu información empresarial es nuestra prioridad. Implementamos:</p><ul><li>Cifrado de extremo a extremo</li><li>Autenticación de múltiples factores</li><li>Cumplimiento con GDPR, HIPAA y SOC 2</li><li>Copias de seguridad automáticas</li></ul><p>Además, realizamos auditorías de seguridad trimestrales para garantizar la protección de tus datos.</p>"
+            }
+          ]'
+          tema="dark"
+          max-abiertos="2">
+        </acordion-lit>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+      
+      <div class="mode-toggle">
+        <button class="toggle-btn active" data-mode="native">Web Components</button>
+        <button class="toggle-btn" data-mode="lit">LitElement</button>
+      </div>
+      
+      <!-- FAQ con Web Components nativos -->
+      <div class="acordion-container native-components">
+        <acordion-plan
+          titulo="Preguntas frecuentes"
+          items='[
+            {
+              "titulo": "¿Cuánto tiempo lleva implementar el software?",
+              "contenido": "<p>El tiempo de implementación varía según el tamaño de tu empresa y la complejidad de tu infraestructura actual. Para pequeñas empresas, generalmente podemos completar la implementación en 2-4 semanas. Para empresas medianas, el proceso puede tomar entre 4-8 semanas. Las grandes corporaciones con necesidades complejas de integración pueden requerir entre 8-12 semanas.</p><p>Nuestro equipo de implementación trabaja estrechamente con tu personal para garantizar una transición sin problemas.</p>"
+            },
+            {
+              "titulo": "¿Ofrecen capacitación para nuestro equipo?",
+              "contenido": "<p>Sí, todos nuestros planes incluyen capacitación básica para administradores del sistema. Además, ofrecemos programas de capacitación a medida para diferentes roles en tu organización:</p><ul><li>Capacitación para usuarios finales</li><li>Capacitación para administradores avanzados</li><li>Talleres de optimización de procesos</li></ul><p>También disponemos de una academia online con cursos autodidactas y webinars periódicos.</p>"
+            },
+            {
+              "titulo": "¿Cómo funciona el soporte técnico?",
+              "contenido": "<p>Nuestro soporte técnico está estructurado en varios niveles para garantizar una resolución rápida y eficiente:</p><ul><li><strong>Nivel 1:</strong> Disponible 24/7 para resolver problemas comunes</li><li><strong>Nivel 2:</strong> Especialistas técnicos disponibles en horario laboral</li><li><strong>Nivel 3:</strong> Ingenieros de desarrollo para casos complejos</li></ul><p>Los tiempos de respuesta varían según tu plan de suscripción, desde respuesta inmediata para planes Enterprise hasta 24 horas para planes Básicos.</p>"
+            }
+          ]'
+          class="theme-premium"
+          max-abiertos="2">
+        </acordion-plan>
+      </div>
+      
+      <!-- FAQ con LitElement -->
+      <div class="acordion-container lit-components hidden">
+        <acordion-lit
+          titulo="Preguntas frecuentes"
+          items='[
+            {
+              "titulo": "¿Cuánto tiempo lleva implementar el software?",
+              "contenido": "<p>El tiempo de implementación varía según el tamaño de tu empresa y la complejidad de tu infraestructura actual. Para pequeñas empresas, generalmente podemos completar la implementación en 2-4 semanas. Para empresas medianas, el proceso puede tomar entre 4-8 semanas. Las grandes corporaciones con necesidades complejas de integración pueden requerir entre 8-12 semanas.</p><p>Nuestro equipo de implementación trabaja estrechamente con tu personal para garantizar una transición sin problemas.</p>"
+            },
+            {
+              "titulo": "¿Ofrecen capacitación para nuestro equipo?",
+              "contenido": "<p>Sí, todos nuestros planes incluyen capacitación básica para administradores del sistema. Además, ofrecemos programas de capacitación a medida para diferentes roles en tu organización:</p><ul><li>Capacitación para usuarios finales</li><li>Capacitación para administradores avanzados</li><li>Talleres de optimización de procesos</li></ul><p>También disponemos de una academia online con cursos autodidactas y webinars periódicos.</p>"
+            },
+            {
+              "titulo": "¿Cómo funciona el soporte técnico?",
+              "contenido": "<p>Nuestro soporte técnico está estructurado en varios niveles para garantizar una resolución rápida y eficiente:</p><ul><li><strong>Nivel 1:</strong> Disponible 24/7 para resolver problemas comunes</li><li><strong>Nivel 2:</strong> Especialistas técnicos disponibles en horario laboral</li><li><strong>Nivel 3:</strong> Ingenieros de desarrollo para casos complejos</li></ul><p>Los tiempos de respuesta varían según tu plan de suscripción, desde respuesta inmediata para planes Enterprise hasta 24 horas para planes Básicos.</p>"
+            }
+          ]'
+          tema="premium"
+          max-abiertos="2">
+        </acordion-lit>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contacto y Footer -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>CloudSolutions</h3>
+          <p>Ofrecemos soluciones cloud innovadoras para empresas de todos los tamaños. Simplifica tus operaciones y potencia tu crecimiento con nuestros servicios.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Enlaces rápidos</h3>
+          <ul>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contacto</h3>
+          <ul>
+            <li>info@cloudsolutions.com</li>
+            <li>+1 (800) 123-4567</li>
+            <li>123 Business Avenue<br>Tech District<br>San Francisco, CA 94103</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 CloudSolutions. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+  
+  <script type="module">
+    // Importar los componentes nativos
+    import './src/suscripcion-template.js';
+    import './src/acordion-template.js';
+  </script>
+  
+  <!-- Los componentes basados en LitElement necesitan importarse como módulos ES6 -->
+  <script type="module" src="src/suscripcion-lit.js"></script>
+  <script type="module" src="src/acordion-lit.js"></script>
+  
+  <script>
+    // Funcionalidad para cambiar entre modos de visualización
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButtons = document.querySelectorAll('.toggle-btn');
+      
+      toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Obtener la sección actual
+          const section = this.closest('.section');
+          
+          // Obtener todos los botones de toggle en esta sección
+          const sectionButtons = section.querySelectorAll('.toggle-btn');
+          
+          // Quitar clase active de todos los botones en esta sección
+          sectionButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Agregar clase active al botón actual
+          this.classList.add('active');
+          
+          // Obtener el modo seleccionado
+          const mode = this.getAttribute('data-mode');
+          
+          // Ocultar/mostrar los componentes correspondientes
+          const nativeComponents = section.querySelectorAll('.native-components');
+          const litComponents = section.querySelectorAll('.lit-components');
+          
+          if (mode === 'native') {
+            nativeComponents.forEach(comp => comp.classList.remove('hidden'));
+            litComponents.forEach(comp => comp.classList.add('hidden'));
+          } else {
+            nativeComponents.forEach(comp => comp.classList.add('hidden'));
+            litComponents.forEach(comp => comp.classList.remove('hidden'));
+          }
+        });
+      });
+    });
+    
+    // Capturar eventos personalizados
+    document.addEventListener('suscripcion-click', function(event) {
+      console.log('Plan seleccionado:', event.detail.titulo);
+      
+      // Prevenir la navegación por defecto para la demo
+      event.preventDefault();
+    });
+    
+    // Capturar eventos del acordeón
+    document.addEventListener('acordion-toggle', function(event) {
+      console.log(`Panel ${event.detail.index} ${event.detail.isOpen ? 'abierto' : 'cerrado'}`);
+    });
+  </script>
+</body>
+</html>
